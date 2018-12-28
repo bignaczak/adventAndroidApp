@@ -1,6 +1,7 @@
 package com.example.bigna.adventofcode;
 
 import android.Manifest;
+import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.content.pm.PackageManager;
@@ -68,6 +69,29 @@ public class MainActivity extends AppCompatActivity {
                 startActivityForResult(myIntent,0);
             }
         });
+
+        Button gotoDay5Button = findViewById(R.id.gotoDay5);
+        gotoDay5Button.setOnClickListener(new View.OnClickListener(){
+            public void onClick(View view){
+                Intent myIntent = new Intent(view.getContext(), DayFive.class);
+                startActivityForResult(myIntent,0);
+            }
+        });
+        Button gotoDay6Button = findViewById(R.id.gotoDay6);
+        gotoDay6Button.setOnClickListener(new View.OnClickListener(){
+            public void onClick(View view){
+                Intent myIntent = new Intent(view.getContext(), DaySix.class);
+                startActivityForResult(myIntent,0);
+            }
+        });
+        Button gotoDay7Button = findViewById(R.id.gotoDay7);
+        gotoDay7Button.setOnClickListener(new View.OnClickListener(){
+            public void onClick(View view){
+                Intent myIntent = new Intent(view.getContext(), DaySeven.class);
+                startActivityForResult(myIntent,0);
+            }
+        });
+
 
     }
 
@@ -161,6 +185,24 @@ public class MainActivity extends AppCompatActivity {
         }
         return similarChars;
     }
+
+    public static BufferedReader prepareInputFileConversion(String logTag,String fileName, AppCompatActivity activity) {
+        BufferedReader readLine = null;
+        if (MainActivity.isExternalStorageWritable() && MainActivity.isStoragePermissionGranted(activity)) {
+            try {
+                File myDir = Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOCUMENTS);
+                File myFile = new File(myDir, fileName);
+                readLine = new BufferedReader(new FileReader(myFile));
+            } catch (FileNotFoundException e) {
+                Log.d(logTag, "File Not Found..." + e.getMessage());
+            } catch (Exception e) {
+                Log.d(logTag, "Other Exception" + e.getMessage());
+            }
+        }
+        return readLine;
+    }
+
+
     public static void readFileIntoArrayList(String logTag, BufferedReader readLine, ArrayList<String> inputFileAsArray) {
         try {
             int i = 0;
@@ -174,6 +216,27 @@ public class MainActivity extends AppCompatActivity {
         }
         Log.d(logTag, Integer.toString(inputFileAsArray.size()) + " lines read into array");
     }
+
+    public static ArrayList<String> getInputFileAsArray(String logTag, String fileName, AppCompatActivity activity){
+        ArrayList<String> inputFileAsArray = new ArrayList<>();
+        BufferedReader readLine = MainActivity.prepareInputFileConversion(logTag, fileName, activity);
+
+        if (readLine != null) {
+            MainActivity.readFileIntoArrayList(logTag, readLine, inputFileAsArray);
+            Log.d(logTag, Integer.toString(inputFileAsArray.size()) + " Records imported");
+        } else {
+            Log.d(logTag, "No BufferedReader Provided");
+        }
+
+        try {
+            readLine.close();
+        } catch (IOException e) {
+            Log.d(logTag, "readLine not able to close" + e.getMessage());
+        }
+
+        return inputFileAsArray;
+    }
+
 
     private int calculateCheckSum(ArrayList<String> inputFileAsArray) {
         int doubleCount=0;

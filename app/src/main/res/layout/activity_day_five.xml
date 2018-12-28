@@ -7,13 +7,13 @@
     android:layout_height="match_parent">
 
     <Button
-        android:id="@+id/day4Done"
+        android:id="@+id/day5Done"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="296dp"
         android:layout_marginRight="296dp"
         android:background="@color/colorPrimaryDark"
-        android:text="Done"
+        android:text="@string/done"
         android:textColor="@color/colorPrimary"
         android:textSize="24sp"
         android:textStyle="bold"
@@ -25,31 +25,7 @@
         app:layout_constraintVertical_bias="1.0" />
 
     <TextView
-        android:id="@+id/day4Header"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
-        android:layout_marginEnd="6dp"
-        android:layout_marginRight="6dp"
-        android:text="Day4"
-        android:textSize="24sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <Button
-        android:id="@+id/day4Compute"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Compute..."
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/day4Header"
-        app:layout_constraintVertical_bias="0.100000024" />
-
-    <TextView
-        android:id="@+id/day4Answer"
+        android:id="@+id/day5Answer2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="3dp"
@@ -58,23 +34,45 @@
         android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.509"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/day4Compute"
-        app:layout_constraintVertical_bias="0.13" />
+        app:layout_constraintTop_toBottomOf="@+id/day5Answer"
+        app:layout_constraintVertical_bias="0.07999998" />
 
     <TextView
-        android:id="@+id/day4Answer2"
+        android:id="@+id/day5Header"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Day5"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toTopOf="@+id/day5Answer2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.029999971" />
+
+    <Button
+        android:id="@+id/day5Compute"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
-        android:layout_marginEnd="3dp"
-        android:layout_marginRight="3dp"
-        android:text="Awaiting Instruction..."
+        android:layout_marginBottom="8dp"
+        android:text="Compute"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/day5Header"
+        app:layout_constraintVertical_bias="0.060000002" />
+
+    <TextView
+        android:id="@+id/day5Answer"
+        android:layout_width="161dp"
+        android:layout_height="wrap_content"
+        android:text="TextView"
         android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.504"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/day4Answer"
-        app:layout_constraintVertical_bias="0.01999998" />
+        app:layout_constraintTop_toBottomOf="@+id/day5Compute"
+        app:layout_constraintVertical_bias="0.120000005" />
 </android.support.constraint.ConstraintLayout>

@@ -1,3 +1,10 @@
 <resources>
     <string name="app_name">AdventOfCode</string>
+    <string name="day6link">Day6...</string>
+    <string name="day7link">Day7...</string>
+    <string name="dayHeader">Welcome to Day #</string>
+    <string name="computeButtonText">Compute...</string>
+    <string name="answerAwait">Awaiting instruction...</string>
+    <string name="done">Done</string>
+
 </resources>

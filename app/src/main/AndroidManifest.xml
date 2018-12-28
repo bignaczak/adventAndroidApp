@@ -20,6 +20,9 @@
         <activity android:name=".DayThree"></activity>
         <activity android:name=".DayOne"></activity>
         <activity android:name=".DayFour"></activity>
+        <activity android:name=".DayFive"></activity>
+        <activity android:name=".DaySix"></activity>
+        <activity android:name=".DaySeven"></activity>
     </application>
 
 </manifest>

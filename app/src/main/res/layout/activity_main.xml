@@ -68,6 +68,51 @@
         app:layout_constraintVertical_bias="0.0" />
 
     <Button
+        android:id="@+id/gotoDay5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:background="@android:color/holo_blue_dark"
+        android:text="Day5..."
+        android:textColor="@color/colorAccent"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/gotoDay4"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <Button
+        android:id="@+id/gotoDay6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:background="@android:color/holo_blue_dark"
+        android:text="@string/day6link"
+        android:textColor="@color/colorAccent"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/gotoDay5"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <Button
+        android:id="@+id/gotoDay7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:background="@android:color/holo_blue_dark"
+        android:text="@string/day7link"
+        android:textColor="@color/colorAccent"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/gotoDay6"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <Button
         android:id="@+id/gotoDay1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
